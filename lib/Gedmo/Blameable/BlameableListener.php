@@ -39,7 +39,7 @@ class BlameableListener extends AbstractTrackingListener
                 throw new InvalidArgumentException("Blame is reference, user must be an object");
             }
 
-            return $this->user;
+            return $this->user->getCodigo();
         }
 
         if ($meta->getTypeOfField($field) === 'string' && !is_string($this->user)) {
